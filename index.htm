@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Exam Preparation</title>
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Exam Preparation</h1>
+        
+        <section id="study-plan">
+            <h2>AI-Based Study Plan</h2>
+            <form id="studyPlanForm">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject"><br>
+
+                <label for="score">Current Score (out of 100):</label>
+                <input type="number" id="score" name="score"><br>
+
+                <label for="comfortLevel">Comfort Level (1-5):</label>
+                <input type="number" id="comfortLevel" name="comfortLevel" min="1" max="5"><br>
+
+                <button type="button" onclick="createStudyPlan()">Generate Study Plan</button>
+            </form>
+            <div id="studyPlanOutput"></div>
+        </section>
+
+        <section id="question-generator">
+            <h2>Intelligent Question Generator</h2>
+            <button onclick="generateQuestion()">Generate Question</button>
+            <div id="questionOutput"></div>
+        </section>
+
+        <section id="virtual-tutor">
+            <h2>Virtual Tutor Feedback</h2>
+            <textarea id="examInput" placeholder="Enter your exam answers"></textarea>
+            <button onclick="provideFeedback()">Get Feedback</button>
+            <div id="feedbackOutput"></div>
+        </section>
+    </div>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
